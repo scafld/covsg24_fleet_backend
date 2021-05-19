@@ -1,0 +1,15 @@
+[submodule "rmf/rmf_core"]
+	path = rmf/rmf_core
+	url = https://github.com/osrf/rmf_core.git
+[submodule "rmf/rmf_schedule_visualizer"]
+	path = rmf/rmf_schedule_visualizer
+	url = https://github.com/osrf/rmf_schedule_visualizer.git
+[submodule "rmf/traffic_editor"]
+	path = rmf/traffic_editor
+	url = https://github.com/osrf/traffic_editor.git
+[submodule "rmf/traffic_editor_assets"]
+	path = rmf/traffic_editor_assets
+	url = https://github.com/osrf/traffic_editor_assets.git
+[submodule "rmf/rmf_demos"]
+	path = rmf/rmf_demos
+	url = https://github.com/project-covsg24/rmf_demos
