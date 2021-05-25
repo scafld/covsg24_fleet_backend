@@ -1,0 +1,6 @@
+building:
+  filename: delta_3rd_floor.building.yaml
+name: delta_3rd_floor
+traffic_maps:
+  {}
+version: 1
