@@ -39,6 +39,12 @@ levels:
         vertices: [83, 86, 85, 84]
       - parameters: {}
         vertices: [436, 437, 435, 434]
+    lanes:
+      - [477, 478, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [478, 479, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [479, 480, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [479, 481, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [481, 482, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
     layers:
       {}
     measurements:
@@ -537,6 +543,12 @@ levels:
       - [706.641, 182.072, 0, ""]
       - [224.977, 9.93, 0, ""]
       - [384.661, 9.93, 0, ""]
+      - [1357.07, 1009.173, 0, location_2]
+      - [1063.65, 1009.173, 0, ""]
+      - [954.127, 972.274, 0, ""]
+      - [272.007, 972.274, 0, location_1, {is_charger: [4, true]}]
+      - [954.127, 306.689, 0, ""]
+      - [1272.397, 306.689, 0, location_3]
     walls:
       - [0, 1, {alpha: [3, 1], texture_name: [1, default]}]
       - [3, 4, {alpha: [3, 1], texture_name: [1, default]}]

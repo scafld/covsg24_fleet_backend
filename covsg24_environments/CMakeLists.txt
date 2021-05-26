@@ -4,8 +4,8 @@ project(covsg24_environments)
 find_package(ament_cmake REQUIRED)
 
 install(DIRECTORY
-  maps/
-  DESTINATION share/${PROJECT_NAME}
+  environments/
+  DESTINATION share/${PROJECT_NAME}/environments/
 )
 
 ament_package()
@@ -20,7 +20,7 @@ foreach(path ${traffic_editor_paths})
 
   set(map_path ${path})
   set(output_world_name ${world_name})
-  set(output_dir ${CMAKE_CURRENT_BINARY_DIR}/maps/${output_world_name})
+  set(output_dir ${CMAKE_CURRENT_BINARY_DIR}/${output_world_name})
   set(output_world_path ${output_dir}/${output_world_name}.world)
   set(output_model_dir ${output_dir}/models)
 
@@ -47,8 +47,9 @@ foreach(path ${traffic_editor_paths})
   )
 
   # now, generate the nav graphs
-  set(output_nav_graphs_dir ${output_dir}/nav_graphs/)
+  set(output_nav_graphs_dir ${output_dir}/)
   set(output_nav_graphs_phony ${output_nav_graphs_dir}/phony)
+  message("GENERATING NAV GRAPHS WITH COMMAND: ros2 run building_map_tools building_map_generator nav ${map_path} ${output_nav_graphs_dir}")
   add_custom_command(
     OUTPUT ${output_nav_graphs_phony}
     COMMAND ros2 run building_map_tools building_map_generator nav ${map_path} ${output_nav_graphs_dir}
@@ -61,7 +62,7 @@ foreach(path ${traffic_editor_paths})
 
   install(
     DIRECTORY ${output_dir}
-    DESTINATION share/${PROJECT_NAME}/maps
+    DESTINATION share/${PROJECT_NAME}/environments/
   )
 
 endforeach()

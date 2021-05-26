@@ -1,0 +1,19 @@
+header:
+  seq: 0
+  stamp: {secs: 0, nsecs: 0}
+  frame_id: ''
+voltage: 12.0
+temperature: 0.0
+current: 0.0
+charge: 0.0
+capacity: 24.0
+design_capacity: 24.0
+percentage: 99.0
+power_supply_status: 2
+power_supply_health: 0
+power_supply_technology: 0
+present: false
+cell_voltage: [3.9]
+cell_temperature: [0]
+location: ''
+serial_number: ''

@@ -13,6 +13,9 @@
 [submodule "rmf/rmf_demos"]
 	path = rmf/rmf_demos
 	url = https://github.com/project-covsg24/rmf_demos
-[submodule "rmf/rmf_building_map_msgs"]
-	path = rmf/rmf_building_map_msgs
-	url = https://github.com/open-rmf/rmf_building_map_msgs
+[submodule "rmf/menge_vendor"]
+	path = rmf/menge_vendor
+	url = https://github.com/open-rmf/menge_vendor
+[submodule "free_fleet"]
+	path = free_fleet
+	url = https://github.com/open-rmf/free_fleet
