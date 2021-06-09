@@ -55,10 +55,44 @@ Install RMF Panel Dashbaord
 python3 -m pip install flask-socketio
 
 # change the npm prefix according to the path to "rmf_demo_panel/static/"
-npm install --prefix src/rmf/rmf_demos/rmf_demo_panel/rmf_demo_panel/static/
-npm run build --prefix src/rmf/rmf_demos/rmf_demo_panel/rmf_demo_panel/static/
+npm install --prefix src/covsg24_fleet_management/rmf/rmf_demos/rmf_demo_panel/rmf_demo_panel/static/
+npm run build --prefix src/covsg24_fleet_management/rmf/rmf_demos/rmf_demo_panel/rmf_demo_panel/static/
 
 colcon build --packages-select rmf_demo_panel
 ```
 
-## TODO automatically setting up gazebo models via cmakelists
+# Usage examples
+## Robot: Jackal
+Running Clearpath Jackal in Delta 3rd floor. 
+### With Real Robot
+With a real robot that's all you need to set up on the server's side
+```bash
+ros2 launch covsg24_fleet_server jackal_in_delta.launch.xml
+```
+
+### Jackal Simulaion
+If Jackal is running in ROS1 simulation then:
+```bash
+ros2 launch covsg24_fleet_server jackal_in_delta.launch.xml use_sim_time:=true
+```
+and set up the ROS1-ROS2 bridge (needed to propagate /clock topic across the system). This example is based on ***ROS2 Foxy*** and ***ROS1 Noetic***:
+```bash
+# First source ROS1
+source /opt/ros/noetic/setup.bash
+
+# Then source ROS2
+source /opt/ros/foxy/setup.bash
+
+# If ROS1 and ROS2 are running on different machines then change "localhost" to appropriate ROS1 master ip
+export ROS_MASTER_URI=http://localhost:11311
+
+# Run the bridge
+ros2 run ros1_bridge dynamic_bridge
+```
+
+### Command the Robot via web GUI
+On the local machine, just open up the browser and go to `http://localhost:5000/`. On a different device (which should still be in the same network) replace `localhost` with the server's ip address.
+
+<br/>
+
+***Now everything should be set on the server/backend side. Follow the client-side instructions to get the robot going.*** 

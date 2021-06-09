@@ -45,15 +45,15 @@
 
     <param name="update_state_frequency" value="20.0"/>
     <param name="publish_state_frequency" value="2.0"/>
-    <param name="use_sim_time" value="true"/>
+    <param name="use_sim_time" value="$(var use_sim_time)"/>
 
-    <param name="translation_x" value="5.14"/>
-    <param name="translation_y" value="3.73"/>
-    <param name="rotation" value="-1.5719"/>
+    <param name="translation_x" value="-24.0"/>
+    <param name="translation_y" value="24.0"/>
+    <param name="rotation" value="0.0"/>
     <param name="scale" value="1.0"/>
   </node>
 
   <!-- rosbridge to bridge the ROS1 gazebo clock source to ROS2 nodes -->
-  <node pkg="ros1_bridge" exec="dynamic_bridge" output="both"/>
+  <!--node pkg="ros1_bridge" exec="dynamic_bridge" output="both"/-->
 
 </launch>
