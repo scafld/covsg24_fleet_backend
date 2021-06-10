@@ -4,6 +4,7 @@ ROS2 based backend server of the application, including RMF & FF server setup, t
 Works on ROS 2 Foxy on Ubuntu 20.04
 
 ```bash
+sudo apt-get install python3-pip
 sudo apt install python3-rosdep
 sudo rosdep init
 rosdep update
@@ -32,13 +33,13 @@ sudo apt-get install python3-colcon*
 Install this repository
 
 ```bash
-git clone --recursive https://github.com/project-covsg24/covsg24_fleet_management
+git clone --recursive https://github.com/project-covsg24/covsg24_fleet_backend
 ```
 
 Ensure all ROS 2 prerequisites are fulfilled,
 
 ```bash
-cd ~/rmf_demos_ws
+cd <your-catkin-workspace>
 rosdep install --from-paths src --ignore-src --rosdistro foxy -yr
 ```
 
@@ -55,8 +56,8 @@ Install RMF Panel Dashbaord
 python3 -m pip install flask-socketio
 
 # change the npm prefix according to the path to "rmf_demo_panel/static/"
-npm install --prefix src/covsg24_fleet_management/rmf/rmf_demos/rmf_demo_panel/rmf_demo_panel/static/
-npm run build --prefix src/covsg24_fleet_management/rmf/rmf_demos/rmf_demo_panel/rmf_demo_panel/static/
+npm install --prefix src/covsg24_fleet_backend/rmf/rmf_demos/rmf_demo_panel/rmf_demo_panel/static/
+npm run build --prefix src/covsg24_fleet_backend/rmf/rmf_demos/rmf_demo_panel/rmf_demo_panel/static/
 
 colcon build --packages-select rmf_demo_panel
 ```
@@ -77,6 +78,8 @@ ros2 launch covsg24_fleet_server jackal_in_delta.launch.xml use_sim_time:=true
 ```
 and set up the ROS1-ROS2 bridge (needed to propagate /clock topic across the system). This example is based on ***ROS2 Foxy*** and ***ROS1 Noetic***:
 ```bash
+sudo apt install ros-foxy-ros1-bridge
+
 # First source ROS1
 source /opt/ros/noetic/setup.bash
 
