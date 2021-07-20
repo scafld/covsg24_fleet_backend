@@ -1,0 +1,6 @@
+building:
+  filename: delta_study_rooms.building.yaml
+name: delta_study_rooms
+traffic_maps:
+  {}
+version: 1
