@@ -1,0 +1,6 @@
+building:
+  filename: hospital_2nd_floor.building.yaml
+name: hospital_2nd_floor
+traffic_maps:
+  {}
+version: 1

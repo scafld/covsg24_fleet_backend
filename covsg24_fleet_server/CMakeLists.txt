@@ -17,9 +17,19 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(rmf_door_msgs REQUIRED)
+
+add_executable(door_control_proxy 
+  src/door_control_proxy.cpp
+)
+
+ament_target_dependencies(door_control_proxy 
+  rclcpp
+  std_msgs
+  rmf_door_msgs
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -36,6 +46,11 @@ install(
   DIRECTORY 
     launch/
   DESTINATION share/${PROJECT_NAME}
+)
+
+install(TARGETS
+  door_control_proxy
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 ament_package()
