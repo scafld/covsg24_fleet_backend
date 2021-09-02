@@ -1,21 +1,45 @@
-[submodule "rmf/rmf_core"]
-	path = rmf/rmf_core
-	url = https://github.com/osrf/rmf_core.git
-[submodule "rmf/rmf_schedule_visualizer"]
-	path = rmf/rmf_schedule_visualizer
-	url = https://github.com/osrf/rmf_schedule_visualizer.git
-[submodule "rmf/traffic_editor"]
-	path = rmf/traffic_editor
-	url = https://github.com/osrf/traffic_editor.git
-[submodule "rmf/traffic_editor_assets"]
-	path = rmf/traffic_editor_assets
-	url = https://github.com/osrf/traffic_editor_assets.git
-[submodule "rmf/rmf_demos"]
-	path = rmf/rmf_demos
-	url = https://github.com/project-covsg24/rmf_demos
 [submodule "rmf/menge_vendor"]
 	path = rmf/menge_vendor
 	url = https://github.com/open-rmf/menge_vendor
 [submodule "free_fleet"]
 	path = free_fleet
 	url = https://github.com/open-rmf/free_fleet
+[submodule "rmf/rmf_battery"]
+	path = rmf/rmf_battery
+	url = https://github.com/open-rmf/rmf_battery
+[submodule "rmf/rmf_task"]
+	path = rmf/rmf_task
+	url = https://github.com/open-rmf/rmf_task
+[submodule "rmf/rmf_traffic"]
+	path = rmf/rmf_traffic
+	url = https://github.com/open-rmf/rmf_traffic
+[submodule "rmf/rmf_utils"]
+	path = rmf/rmf_utils
+	url = https://github.com/open-rmf/rmf_utils
+[submodule "rmf/rmf_internal_msgs"]
+	path = rmf/rmf_internal_msgs
+	url = https://github.com/open-rmf/rmf_internal_msgs
+[submodule "rmf/rmf_ros2"]
+	path = rmf/rmf_ros2
+	url = https://github.com/open-rmf/rmf_ros2
+[submodule "rmf/rmf_visualization"]
+	path = rmf/rmf_visualization
+	url = https://github.com/open-rmf/rmf_visualization
+[submodule "rmf/rmf_visualization_msgs"]
+	path = rmf/rmf_visualization_msgs
+	url = https://github.com/open-rmf/rmf_visualization_msgs
+[submodule "rmf/rmf_traffic_editor"]
+	path = rmf/rmf_traffic_editor
+	url = https://github.com/open-rmf/rmf_traffic_editor
+[submodule "rmf/rmf_building_map_msgs"]
+	path = rmf/rmf_building_map_msgs
+	url = https://github.com/open-rmf/rmf_building_map_msgs
+[submodule "rmf/rmf_cmake_uncrustify"]
+	path = rmf/rmf_cmake_uncrustify
+	url = https://github.com/open-rmf/rmf_cmake_uncrustify
+[submodule "rmf/ament_cmake_catch2"]
+	path = rmf/ament_cmake_catch2
+	url = https://github.com/open-rmf/ament_cmake_catch2
+[submodule "rmf/rmf_simulation"]
+	path = rmf/rmf_simulation
+	url = https://github.com/open-rmf/rmf_simulation
