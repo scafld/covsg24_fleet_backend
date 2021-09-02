@@ -43,3 +43,6 @@
 [submodule "rmf/rmf_simulation"]
 	path = rmf/rmf_simulation
 	url = https://github.com/open-rmf/rmf_simulation
+[submodule "rmf/rmf_demos"]
+	path = rmf/rmf_demos
+	url = https://github.com/open-rmf/rmf_demos

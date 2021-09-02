@@ -27,7 +27,9 @@ sudo apt update && sudo apt install \
   qt5-default \
   python3-shapely python3-yaml python3-requests \
   -y
+
 sudo apt-get install python3-colcon*
+pip3 install pyproj
 ```
 
 Install this repository
@@ -56,10 +58,10 @@ Install RMF Panel Dashbaord
 python3 -m pip install flask-socketio
 
 # change the npm prefix according to the path to "rmf_demo_panel/static/"
-npm install --prefix src/covsg24_fleet_backend/rmf/rmf_demos/rmf_demo_panel/rmf_demo_panel/static/
-npm run build --prefix src/covsg24_fleet_backend/rmf/rmf_demos/rmf_demo_panel/rmf_demo_panel/static/
+npm install --prefix src/covsg24_fleet_backend/rmf/rmf_demos/rmf_demos_panel/rmf_demos_panel/static/
+npm run build --prefix src/covsg24_fleet_backend/rmf/rmf_demos/rmf_demos_panel/rmf_demos_panel/static/
 
-colcon build --packages-select rmf_demo_panel
+colcon build --packages-select rmf_demos_panel
 ```
 
 # Usage examples
@@ -95,6 +97,8 @@ ros2 run ros1_bridge dynamic_bridge
 
 ### Command the Robot via web GUI
 On the local machine, just open up the browser and go to `http://localhost:5000/`. On a different device (which should still be in the same network) replace `localhost` with the server's ip address.
+
+**Note that this will download the latest webpack "GUI" hosted on rmf_demos github page. Thus internet is required when you are running the gui_server for the first time.**
 
 <br/>
 
