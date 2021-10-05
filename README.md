@@ -49,7 +49,7 @@ Build the packages
 
 ```bash
 source /opt/ros/foxy/setup.bash
-colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+colcon build --packages-skip rmf_building_sim_ignition_plugins
 ```
 
 Install RMF Panel Dashbaord
