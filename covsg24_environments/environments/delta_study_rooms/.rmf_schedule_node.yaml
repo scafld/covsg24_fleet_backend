@@ -1,0 +1,15 @@
+- operation: Add
+  participant_description:
+    name: mir100_0
+    group: mir100_fleet
+    responsiveness: Responsive
+    profile:
+      footprint:
+        type: Circle
+        index: "\x00"
+      vicinity:
+        type: Circle
+        index: "\x01"
+      shape_context:
+        - 0.25
+        - 0.2
