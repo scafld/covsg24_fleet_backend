@@ -14,7 +14,7 @@ file(GLOB_RECURSE traffic_editor_paths "environments/*.building.yaml")
 
 foreach(path ${traffic_editor_paths})
 
-  # Get the output world name
+  # Get the output world name 
   string(REGEX REPLACE "\\.[^.]*\.[^.]*$" "" no_extension_path ${path})
   string(REGEX MATCH "[^\/]+$" world_name  ${no_extension_path})
 

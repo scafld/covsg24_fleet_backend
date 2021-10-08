@@ -1,0 +1,16 @@
+<?xml version='1.0' ?>
+<launch>
+  <arg name="use_sim_time" default="true"/>
+
+  <include file="$(find-pkg-share covsg24_fleet_server)/include/rmf_fleet.launch.xml">
+    <arg name="fleet_name" value="robotont_fleet"/>
+    <arg name="robot_prefix" value="robotont"/>
+    <arg name="environment_name" value="hospital_2nd_floor"/>
+    <arg name="use_sim_time" value="$(var use_sim_time)"/>
+
+    <arg name="map_x" value="-60.2"/>
+    <arg name="map_y" value="29.3"/>
+    <arg name="map_rotation" value="0.0"/>
+    <arg name="map_scale" value="1.0"/>
+  </include>
+</launch>

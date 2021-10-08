@@ -1,5 +1,5 @@
 {
-  "world_name" : "Delta Study Area",  
+  "world_name" : "Hospital level 2",  
   "valid_task": ["Delivery", "Loop"],
   "task": {
     "Delivery": {
@@ -14,14 +14,9 @@
     },
     "Loop": {
       "places": [
-        "main_exit",
-        "other_exit",
-        "cubicles_1",
-        "cubicles_2",
-        "cubicles_3",
-        "cubicles_4",
-        "couch_area",
-        "aut_nav_lab"
+        "icu_1",
+        "icu_2",
+        "lab"
       ]
     },
     "Clean": {
