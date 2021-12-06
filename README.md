@@ -56,10 +56,8 @@ Install RMF Panel Dashbaord
 
 ```bash
 python3 -m pip install flask-socketio
-
-# change the npm prefix according to the path to "rmf_demo_panel/static/"
-npm install --prefix src/covsg24_fleet_backend/rmf/rmf_demos/rmf_demos_panel/rmf_demos_panel/static/
-npm run build --prefix src/covsg24_fleet_backend/rmf/rmf_demos/rmf_demos_panel/rmf_demos_panel/static/
+pip install fiona
+pip install rtree
 
 colcon build --packages-select rmf_demos_panel
 ```
@@ -96,9 +94,7 @@ ros2 run ros1_bridge dynamic_bridge
 ```
 
 ### Command the Robot via web GUI
-On the local machine, just open up the browser and go to `http://localhost:5000/`. On a different device (which should still be in the same network) replace `localhost` with the server's ip address.
-
-**Note that this will download the latest webpack "GUI" hosted on rmf_demos github page. Thus internet is required when you are running the gui_server for the first time.**
+Just open up the browser and go to `https://open-rmf.github.io/rmf-panel-js/`.
 
 <br/>
 

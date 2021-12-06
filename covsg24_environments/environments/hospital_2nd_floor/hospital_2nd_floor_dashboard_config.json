@@ -16,7 +16,11 @@
       "places": [
         "icu_1",
         "icu_2",
-        "lab"
+        "lab",
+        "lab_entrance",
+        "icu_1_entrance",
+        "icu_2_entrance",
+        "couch_area"
       ]
     },
     "Clean": {
