@@ -33,6 +33,7 @@
       <arg name="use_sim_time" value="$(var use_sim_time)"/>
 
       <!-- How long it can be delayed before we give up and start over -->
+      <arg name="disable_delay_threshold" value="true"/>
       <arg name="delay_threshold" value="15.0"/>
 
       <!-- Don't make the tinyRobot wait long to retry -->

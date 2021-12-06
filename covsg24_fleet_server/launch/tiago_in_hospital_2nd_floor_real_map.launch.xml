@@ -3,8 +3,8 @@
   <arg name="use_sim_time" default="true"/>
 
   <include file="$(find-pkg-share covsg24_fleet_server)/include/rmf_fleet.launch.xml">
-    <arg name="fleet_name" value="robotont_fleet"/>
-    <arg name="robot_prefix" value="robotont"/>
+    <arg name="fleet_name" value="tiago_fleet"/>
+    <arg name="robot_prefix" value="tiago"/>
     <arg name="environment_name" value="hospital_2nd_floor"/>
     <arg name="use_sim_time" value="$(var use_sim_time)"/>
 
