@@ -1,0 +1,15 @@
+- operation: Add
+  participant_description:
+    name: tiago_0
+    group: tiago_fleet
+    responsiveness: Responsive
+    profile:
+      footprint:
+        type: Circle
+        index: "\x00"
+      vicinity:
+        type: Circle
+        index: "\x01"
+      shape_context:
+        - 0.15
+        - 0.2
