@@ -1,0 +1,36 @@
+{
+  "world_name" : "Delta Study Area",  
+  "valid_task": ["Delivery", "Loop"],
+  "task": {
+    "Delivery": {
+      "option": {
+        "coke": {
+          "pickup_place_name": "pantry",
+          "pickup_dispenser": "coke_dispenser",
+          "dropoff_place_name": "hardware_2",
+          "dropoff_ingestor": "coke_ingestor"
+        }
+      }
+    },
+    "Loop": {
+      "places": [
+        "main_exit",
+        "other_exit",
+        "cubicles_1",
+        "cubicles_2",
+        "cubicles_3",
+        "cubicles_4",
+        "couch_area",
+        "aut_nav_lab"
+      ]
+    },
+    "Clean": {
+    },
+    "Station": {
+    },
+    "Patrol": {
+    },
+    "Charging": {
+    }
+  }
+}
