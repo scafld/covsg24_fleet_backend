@@ -1,7 +1,7 @@
 <?xml version='1.0' ?>
 <launch>
   <arg name="use_sim_time" default="false"/>
-  <arg name="fleet_name" default="tiago_fleet"/>
+  <arg name="fleet_name" default="covsg24_fleet"/>
   <arg name="environment_name" default="hospital_2nd_floor"/>
 
   <arg name="map_x" default="-50.5"/>
@@ -23,7 +23,7 @@
 
   <!-- covsg24 fleet -->
   <include file="$(find-pkg-share covsg24_fleet_server)/include/rmf_fleet.launch.xml">
-    <arg name="robot_prefix" value="tiago"/>
+    <arg name="robot_prefix" value="robot"/>
     <arg name="fleet_name" value="$(var fleet_name)"/>
     <arg name="environment_name" value="$(var environment_name)"/>
     <arg name="use_sim_time" value="$(var use_sim_time)"/>

@@ -19,8 +19,13 @@
         "lab",
         "lab_entrance",
         "icu_1_entrance",
+        "icu_1_test_location_1",
+        "icu_1_test_location_2",
         "icu_2_entrance",
-        "couch_area"
+        "couch_area",
+        "couch_area_2",
+        "couch_area_3",
+        "lab_entrance_2"
       ]
     },
     "Clean": {
