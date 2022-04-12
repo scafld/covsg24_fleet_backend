@@ -23,7 +23,7 @@ Panels:
     Splitter Ratio: 0.5
   - Class: rmf_visualization_rviz2_plugins/SchedulePanel
     Finish: 600
-    Map: study_rooms
+    Map: L2
     Name: SchedulePanel
     Topic: /rmf_visualization/parameters
   - Class: rmf_visualization_rviz2_plugins/DoorPanel

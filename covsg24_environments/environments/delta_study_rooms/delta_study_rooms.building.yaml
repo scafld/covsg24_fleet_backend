@@ -15,10 +15,12 @@ crowd_sim:
 graphs:
   {}
 levels:
-  study_rooms:
+  L2:
     drawing:
       filename: delta_study_rooms.png
     elevation: 0
+    flattened_x_offset: 0
+    flattened_y_offset: 0
     floors:
       - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
         vertices: [10, 13, 12, 210, 211, 212, 213, 214, 104, 7]

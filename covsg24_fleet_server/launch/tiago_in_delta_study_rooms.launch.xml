@@ -1,8 +1,7 @@
 <?xml version='1.0' ?>
 <launch>
   <arg name="use_sim_time" default="false"/>
-  <arg name="fleet_name" default="tiago_fleet"/>
-  <arg name="robot_prefix" default="tiago"/>
+  <arg name="fleet_name" default="covsg24_fleet"/>
   <arg name="environment_name" default="delta_study_rooms"/>
   
   <arg name="map_x" default="-6.3"/>
@@ -14,18 +13,19 @@
   <include file="$(find-pkg-share covsg24_fleet_server)/include/common.launch.xml">
     <arg name="environment_name" value="$(var environment_name)"/>
     <arg name="use_sim_time" value="$(var use_sim_time)"/>
-  </include>
-
-  <!-- Bring up the robot specific free fleet server and the state aggregator -->
-  <include file="$(find-pkg-share covsg24_fleet_server)/include/rmf_fleet.launch.xml">
     <arg name="fleet_name" value="$(var fleet_name)"/>
-    <arg name="robot_prefix" value="$(var robot_prefix)"/>
-    <arg name="environment_name" value="$(var environment_name)"/>
-    <arg name="use_sim_time" value="$(var use_sim_time)"/>
 
     <arg name="map_x" value="$(var map_x)"/>
     <arg name="map_y" value="$(var map_y)"/>
     <arg name="map_rotation" value="$(var map_rotation)"/>
     <arg name="map_scale" value="$(var map_scale)"/>
+  </include>
+
+  <!-- Bring up the robot specific free fleet server and the state aggregator -->
+  <include file="$(find-pkg-share covsg24_fleet_server)/include/rmf_fleet.launch.xml">
+    <arg name="robot_prefix" value="robot"/>
+    <arg name="fleet_name" value="$(var fleet_name)"/>
+    <arg name="environment_name" value="$(var environment_name)"/>
+    <arg name="use_sim_time" value="$(var use_sim_time)"/>
   </include>
 </launch>
