@@ -46,3 +46,12 @@
 [submodule "rmf/rmf_demos"]
 	path = rmf/rmf_demos
 	url = https://github.com/open-rmf/rmf_demos
+[submodule "rmf/nlohmann_json_schema_validator_vendor"]
+	path = rmf/nlohmann_json_schema_validator_vendor
+	url = https://github.com/open-rmf/nlohmann_json_schema_validator_vendor.git
+[submodule "rmf/pybind11_json_vendor"]
+	path = rmf/pybind11_json_vendor
+	url = https://github.com/open-rmf/pybind11_json_vendor.git
+[submodule "rmf/rmf_api_msgs"]
+	path = rmf/rmf_api_msgs
+	url = https://github.com/open-rmf/rmf_api_msgs.git

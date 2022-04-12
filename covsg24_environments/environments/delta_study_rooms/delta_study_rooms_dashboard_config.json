@@ -4,11 +4,11 @@
   "task": {
     "Delivery": {
       "option": {
-        "coke": {
-          "pickup_place_name": "pantry",
-          "pickup_dispenser": "coke_dispenser",
-          "dropoff_place_name": "hardware_2",
-          "dropoff_ingestor": "coke_ingestor"
+        "supplies": {
+          "pickup_place_name": "main_exit",
+          "pickup_dispenser": "main_exit_pickup",
+          "dropoff_place_name": "hallway_intermediate",
+          "dropoff_ingestor": "hallway_intermediate_dropoff"
         }
       }
     },
@@ -21,7 +21,8 @@
         "cubicles_3",
         "cubicles_4",
         "couch_area",
-        "aut_nav_lab"
+        "aut_nav_lab",
+        "hallway_intermediate"
       ]
     },
     "Clean": {
