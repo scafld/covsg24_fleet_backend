@@ -21,7 +21,7 @@
     <arg name="map_scale" value="$(var map_scale)"/>
   </include>
 
-  <!-- Bring up the robot specific free fleet server and the state aggregator -->
+  <!-- covsg24 fleet -->
   <include file="$(find-pkg-share covsg24_fleet_server)/include/rmf_fleet.launch.xml">
     <arg name="robot_prefix" value="robot"/>
     <arg name="fleet_name" value="$(var fleet_name)"/>

@@ -1,9 +1,24 @@
 ROS2 based backend server of the application, including RMF & FF server setup, traffic maps and RMF GUI configurations
 
-# Installation
-Works on ROS 2 Foxy on Ubuntu 20.04
+# Overview
+Figure below shows the architecture of our deployed system. The setup consists of
+* robots
+* automated doors
+* user interface devices, such as tablets
+* dispensers and ingestors, which are used to place and retrieve objects from the robot respectively
+* and RMF, orchestrating the whole setup. 
+
+All devices are connected via Virtual Private Network (VPN). FreeFleet is used as the fleet manager. Structurally FreeFleet is segregated to a central server and clients, a client per each robot. The server is responsible for mediating navigation requests from RMF and providing feedback to RMF via aggregating the state of the whole fleet. The FreeFleet client passes navigation requests from the server to the driver of the local robot (ROS Navigation) and provides feedback of the robot’s state. Both RMF and the FreeFleet server are running on a dedicated PC. FreeFleet server and clients communicate purely via Cyclone DDS, thus the server can simultaneously manage both ROS1 and ROS2 based robots. Each door, dispenser and ingestor is equipped with a custom controller ([door controller](https://github.com/project-covsg24/card_swipe_py); [tablet-based dispenser](https://github.com/project-covsg24/rmf_dispenser_ingestor_tools)) that accepts commands from and sends feedback to RMF. Finally, RMF Web is utilized as a graphical user interface, mostly deployed on tablets via a web browser.
+
+<p align="center">
+  <img src="docs/system_setup.png" class="center" width=600"/>
+</p>
+
+# Server Setup Instructions
+Works on ROS 2 Foxy (CycloneDDS recommended) on Ubuntu 20.04
 
 ```bash
+sudo apt install ros-foxy-rmw-cyclonedds-cpp
 sudo apt-get install python3-pip
 sudo apt install python3-rosdep
 sudo rosdep init
@@ -63,18 +78,28 @@ colcon build --packages-select rmf_demos_panel
 ```
 
 # Usage examples
-## Robot: Jackal
-Running Clearpath Jackal in Delta 3rd floor. 
+## Running the server in hospital's ICU area configuration.
+
+First make sure that server is using CycloneDDS
+```bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+```
+
 ### With Real Robot
 With a real robot that's all you need to set up on the server's side
 ```bash
-ros2 launch covsg24_fleet_server jackal_in_delta.launch.xml
+ros2 launch covsg24_fleet_server fleet_in_hospital_icu.launch.xml
 ```
 
-### Jackal Simulaion
-If Jackal is running in ROS1 simulation then:
+Then launch a client setup on, e.g., TIAGo or any supported robot(s) ([setup instructions](https://github.com/project-covsg24/covsg24_fleet_client)):
 ```bash
-ros2 launch covsg24_fleet_server jackal_in_delta.launch.xml use_sim_time:=true
+roslaunch covsg24_fleet_client tiago_free_fleet_client.launch
+```
+
+### Simulation
+If the robot is running in ROS1 simulation then:
+```bash
+ros2 launch covsg24_fleet_server fleet_in_hospital_icu.launch.xml use_sim_time:=true
 ```
 and set up the ROS1-ROS2 bridge (needed to propagate /clock topic across the system). This example is based on ***ROS2 Foxy*** and ***ROS1 Noetic***:
 ```bash
@@ -93,9 +118,22 @@ export ROS_MASTER_URI=http://localhost:11311
 ros2 run ros1_bridge dynamic_bridge
 ```
 
+### ROS1-based simulation with ROS2 infrastructure plugins
+
+The hospital simulation contains doors that RMF can control. Each door in gazebo has a plugin that communicates via ROS2. So even if the robot is launched via ROS1, the door plugins need the ROS2 environment variables also, hence when running the sim:
+
+```bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+source /opt/ros/foxy/setup.bash
+source /opt/ros/foxy/setup.bash
+source <your-ros2-colcon-workspace>/install/setup.bash
+source <your-ros1-catkin-workspace>/devel/setup.bash
+export GAZEBO_PLUGIN_PATH="/<full-path-to-your-ros2-colcon-workspace>/install/rmf_building_sim_gazebo_plugins/lib/rmf_building_sim_gazebo_plugins"
+
+roslaunch covsg24_fleet_client robotont_in_hospital_l2.launch
+```
+
 ### Command the Robot via web GUI
-Just open up the browser and go to `https://open-rmf.github.io/rmf-panel-js/`.
+Just open up the browser and go to `https://open-rmf.github.io/rmf-panel-js/`. Or use the RMF Web GUI ([setup instructions](https://github.com/project-covsg24/rmf-web))
 
-<br/>
-
-***Now everything should be set on the server/backend side. Follow the client-side instructions to get the robot going.*** 
+<br/> 
