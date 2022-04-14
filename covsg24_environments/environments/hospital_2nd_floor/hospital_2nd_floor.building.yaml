@@ -335,9 +335,9 @@ levels:
       - [3656.103, 476.796, 0, ""]
       - [3604.18, 476.796, 0, ""]
       - [362.482, 2147.614, 0, lab_dropoff_location, {dropoff_ingestor: [1, lab_dropoff_ingestor]}]
-      - [2559.467, 1496.537, 0, couch_area]
+      - [2559.467, 1496.537, 0, couch_area, {dropoff_ingestor: [1, couch_area_dropoff_ingestor]}]
       - [2578.506, 1525.922, 0, ""]
-      - [2629.83, 1604.816, 0, couch_area_2]
+      - [2628.296, 1597.995, 0, couch_area_2, {pickup_dispenser: [1, couch_area_2_pickup_dispenser]}]
       - [3296.083, 1781.612, 0, icu1_pickup_location, {pickup_dispenser: [1, icu1_pickup_dispenser]}]
     walls:
       - [18, 19, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
