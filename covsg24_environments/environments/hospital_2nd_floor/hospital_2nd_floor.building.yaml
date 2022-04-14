@@ -28,8 +28,6 @@ levels:
     drawing:
       filename: hospital_2nd_floor.png
     elevation: 0
-    flattened_x_offset: 0
-    flattened_y_offset: 0
     floors:
       - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
         vertices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
@@ -39,7 +37,6 @@ levels:
       - [163, 164, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [165, 166, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [169, 158, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, forward], speed_limit: [3, 0]}]
-      - [170, 171, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [171, 172, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [173, 168, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [174, 175, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
@@ -70,6 +67,8 @@ levels:
       - [193, 192, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [161, 162, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, forward], speed_limit: [3, 0]}]
       - [206, 207, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [208, 170, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [170, 171, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
     layers:
       scan_based_map:
         color: [1, 0, 0, 0.5]
@@ -301,7 +300,7 @@ levels:
       - [2868.861, 1368.052, 0, ""]
       - [2711.821, 1367.286, 0, ""]
       - [2520.213, 1596.401, 0, ""]
-      - [3208.291, 1740.093, 0, icu1_test_location_2]
+      - [3271.495, 1740.652, 0, icu1_test_location_2]
       - [3437.604, 1759.508, 0, ""]
       - [3436.43, 1916.877, 0, icu_1]
       - [2822.336, 1367.057, 0, ""]
@@ -335,10 +334,11 @@ levels:
       - [3605.06, 592.523, 0, ""]
       - [3656.103, 476.796, 0, ""]
       - [3604.18, 476.796, 0, ""]
-      - [346.765, 2181.193, 0, lab]
+      - [362.482, 2147.614, 0, lab_dropoff_location, {dropoff_ingestor: [1, lab_dropoff_ingestor]}]
       - [2559.467, 1496.537, 0, couch_area]
       - [2578.506, 1525.922, 0, ""]
       - [2629.83, 1604.816, 0, couch_area_2]
+      - [3296.083, 1781.612, 0, icu1_pickup_location, {pickup_dispenser: [1, icu1_pickup_dispenser]}]
     walls:
       - [18, 19, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [19, 20, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
