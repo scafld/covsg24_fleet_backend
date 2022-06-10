@@ -4,6 +4,7 @@
 
   <arg name="use_sim_time" default="false" description="Use the /clock topic for time to sync with simulation"/>
   <arg name="environment_name"/>
+  <arg name="level_name"/>
   <arg name="fleet_name"/>
   <arg name="viz_config_file" default="$(find-pkg-share covsg24_environments)/environments/$(var environment_name)/$(var environment_name).rviz"/>
   <arg name="config_file" default="$(find-pkg-share covsg24_environments)/environments/$(var environment_name)/$(var environment_name).building.yaml"/>
@@ -37,7 +38,7 @@
   <!-- Visualizer -->
   <group unless="$(var headless)">
     <include file="$(find-pkg-share rmf_visualization)/visualization.launch.xml">
-      <arg name="map_name" value="L2"/>
+      <arg name="map_name" value="$(var level_name)"/>
       <arg name="viz_config_file" value ="$(var viz_config_file)"/>
     </include>
   </group>
